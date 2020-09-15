@@ -23,7 +23,7 @@ function App() {
 
       if(consultar) {
         const appId = '01f64366b8dcda595e645db53e5605f0';
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}&units=metric`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}&units=metric`;
   
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
@@ -42,6 +42,7 @@ function App() {
 
     }
     consultarAPI();
+    //eslint-disable-next-line
   }, [consultar]);
 
   let componente;

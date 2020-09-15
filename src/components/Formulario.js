@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Error from './Error'
+import Error from './Error';
+import PropTypes from 'prop-types';
 
 const Formulario = ({busqueda, guardarBusqueda, guardarConsultar}) => {
     
@@ -67,6 +68,8 @@ const Formulario = ({busqueda, guardarBusqueda, guardarConsultar}) => {
                     <option value="ES">España</option>
                     <option value="PE">Perú</option>
                     <option value="CA">Canada</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="CL">Chile</option>
                 </select>
                 <label htmlFor="pais">Pais: </label>
             </div>
@@ -80,6 +83,12 @@ const Formulario = ({busqueda, guardarBusqueda, guardarConsultar}) => {
             </div>
         </form>
     );
+}
+
+Formulario.propTypes = {
+    busqueda: PropTypes.object.isRequired,
+    guardarBusqueda: PropTypes.func.isRequired,
+    guardarConsultar: PropTypes.func.isRequired
 }
 
 export default Formulario;
